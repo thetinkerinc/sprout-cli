@@ -11,7 +11,7 @@
 		"build": "tsc",
 		"prepare": "chmod +x ./dist/index.js",
 		"upload": "npm publish --access=public",
-		"release": "run-s build prepare upload"
+		"publish": "run-s build prepare upload"
 	},
 	"bin": {
 		"sprt": "dist/index.js"
