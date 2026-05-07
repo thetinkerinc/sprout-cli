@@ -1,20 +1,19 @@
 {
 	"name": "sprt",
-	"version": "0.1.3",
+	"version": "0.1.5",
 	"license": "MIT",
 	"type": "module",
 	"description": "CLI for managing a Sprout app",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
 	"scripts": {
 		"dev": "tsc --watch",
-		"build": "tsc",
-		"prepare": "chmod +x ./dist/index.js",
+		"build": "tsdown",
 		"upload": "npm publish --access=public",
-		"release": "run-s build prepare upload"
+		"release": "run-s build upload"
 	},
 	"bin": {
-		"sprt": "dist/index.js"
+		"sprt": "dist/index.mjs"
 	},
 	"files": [
 		"dist"
@@ -23,7 +22,8 @@
 		"@types/bun": "^1.3.13",
 		"@types/node": "^25.6.1",
 		"@types/shelljs": "^0.10.0",
-		"npm-run-all": "^4.1.5"
+		"npm-run-all": "^4.1.5",
+		"tsdown": "^0.22.0"
 	},
 	"peerDependencies": {
 		"typescript": "^6.0.3"
