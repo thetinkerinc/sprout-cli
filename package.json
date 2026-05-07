@@ -1,6 +1,6 @@
 {
 	"name": "sprt",
-	"version": "0.1.0",
+	"version": "0.1.3",
 	"license": "MIT",
 	"type": "module",
 	"description": "CLI for managing a Sprout app",
@@ -11,7 +11,7 @@
 		"build": "tsc",
 		"prepare": "chmod +x ./dist/index.js",
 		"upload": "npm publish --access=public",
-		"publish": "run-s build prepare upload"
+		"release": "run-s build prepare upload"
 	},
 	"bin": {
 		"sprt": "dist/index.js"
